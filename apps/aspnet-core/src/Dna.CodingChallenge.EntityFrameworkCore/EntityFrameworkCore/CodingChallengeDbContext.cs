@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Dna.CodingChallenge.Users;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
+using Dna.CodingChallenge.Shows;
 
 namespace Dna.CodingChallenge.EntityFrameworkCore
 {
@@ -22,11 +23,12 @@ namespace Dna.CodingChallenge.EntityFrameworkCore
     {
         public DbSet<AppUser> Users { get; set; }
 
-        /* Add DbSet properties for your Aggregate Roots / Entities here.
-         * Also map them inside CodingChallengeDbContextModelCreatingExtensions.ConfigureCodingChallenge
-         */
+    /* Add DbSet properties for your Aggregate Roots / Entities here.
+     * Also map them inside CodingChallengeDbContextModelCreatingExtensions.ConfigureCodingChallenge
+     */
+    public DbSet<Show> Shows { get; set; }
 
-        public CodingChallengeDbContext(DbContextOptions<CodingChallengeDbContext> options)
+    public CodingChallengeDbContext(DbContextOptions<CodingChallengeDbContext> options)
             : base(options)
         {
 

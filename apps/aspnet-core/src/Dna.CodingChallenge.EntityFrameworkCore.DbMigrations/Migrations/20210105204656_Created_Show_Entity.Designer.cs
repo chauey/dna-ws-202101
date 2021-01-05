@@ -4,15 +4,17 @@ using Dna.CodingChallenge.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace Dna.CodingChallenge.Migrations
 {
     [DbContext(typeof(CodingChallengeMigrationsDbContext))]
-    partial class CodingChallengeMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210105204656_Created_Show_Entity")]
+    partial class Created_Show_Entity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
