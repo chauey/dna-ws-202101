@@ -1,8 +1,212 @@
 {
   "version": 2,
-
-  "projects": {},
+  "projects": {
+    "dna-ng-app": {
+      "projectType": "application",
+      "root": "apps/dna-ng-app",
+      "sourceRoot": "apps/dna-ng-app/src",
+      "prefix": "dna-ws",
+      "targets": {
+        "build": {
+          "executor": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/dna-ng-app",
+            "index": "apps/dna-ng-app/src/index.html",
+            "main": "apps/dna-ng-app/src/main.ts",
+            "polyfills": "apps/dna-ng-app/src/polyfills.ts",
+            "tsConfig": "apps/dna-ng-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/dna-ng-app/src/favicon.ico",
+              "apps/dna-ng-app/src/assets"
+            ],
+            "styles": [
+              "apps/dna-ng-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dna-ng-app/src/environments/environment.ts",
+                  "with": "apps/dna-ng-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "dna-ng-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dna-ng-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "dna-ng-app:build"
+          }
+        },
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dna-ng-app/tsconfig.app.json",
+              "apps/dna-ng-app/tsconfig.spec.json",
+              "apps/dna-ng-app/tsconfig.editor.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dna-ng-app/**/*"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/dna-ng-app"
+          ],
+          "options": {
+            "jestConfig": "apps/dna-ng-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "dna-ng-app-e2e": {
+      "root": "apps/dna-ng-app-e2e",
+      "sourceRoot": "apps/dna-ng-app-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/dna-ng-app-e2e/cypress.json",
+            "tsConfig": "apps/dna-ng-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "dna-ng-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "dna-ng-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dna-ng-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dna-ng-app-e2e/**/*"
+            ]
+          }
+        }
+      }
+    },
+    "dna-shared-ng-lib": {
+      "projectType": "library",
+      "root": "libs/dna-shared-ng-lib",
+      "sourceRoot": "libs/dna-shared-ng-lib/src",
+      "prefix": "dna-ws",
+      "targets": {
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/dna-shared-ng-lib/tsconfig.lib.json",
+              "libs/dna-shared-ng-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/dna-shared-ng-lib/**/*"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/dna-shared-ng-lib"
+          ],
+          "options": {
+            "jestConfig": "libs/dna-shared-ng-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "netflix-ng-lib": {
+      "projectType": "library",
+      "root": "libs/netflix-ng-lib",
+      "sourceRoot": "libs/netflix-ng-lib/src",
+      "prefix": "dna-ws",
+      "targets": {
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/netflix-ng-lib/tsconfig.lib.json",
+              "libs/netflix-ng-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/netflix-ng-lib/**/*"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/netflix-ng-lib"
+          ],
+          "options": {
+            "jestConfig": "libs/netflix-ng-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "dna-ng-app"
 }

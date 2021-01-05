@@ -1,5 +1,5 @@
 {
-  "npmScope": "dna-ws-202101",
+  "npmScope": "dna-ws",
   "affected": {
     "defaultBase": "master"
   },
@@ -22,5 +22,19 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "dna-ng-app": {
+      "tags": []
+    },
+    "dna-ng-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["dna-ng-app"]
+    },
+    "dna-shared-ng-lib": {
+      "tags": []
+    },
+    "netflix-ng-lib": {
+      "tags": []
+    }
+  }
 }

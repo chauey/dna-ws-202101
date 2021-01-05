@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dna-ws/dna-shared-ng-lib": ["libs/dna-shared-ng-lib/src/index.ts"],
+      "@dna-ws/netflix-ng-lib": ["libs/netflix-ng-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
