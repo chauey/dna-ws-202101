@@ -15,6 +15,19 @@ function configureRoutes(routesService: RoutesService) {
         order: 1,
         layout: eLayoutType.application,
       },
+      {
+        path: '/netflix',
+        name: '::Menu:Netflix',
+        iconClass: 'fas fa-film',
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/shows',
+        name: '::Menu:Shows',
+        parentName: '::Menu:Netflix',
+        layout: eLayoutType.application,
+      },
     ]);
   };
 }

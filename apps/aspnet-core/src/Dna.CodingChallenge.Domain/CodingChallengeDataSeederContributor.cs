@@ -25,7 +25,7 @@ namespace Dna.CodingChallenge
             new Show
             {
               Title = "Breaking Bad",
-              Type = ShowType.Movie,
+              Type = ShowType.TvShow,
               DateAdded = new DateTime(2010, 6, 8),
               Rating = RatingType.PG13
             },

@@ -56,8 +56,8 @@ npm i @abp/ng.theme.basic
 install abp cli
 - `dotnet tool install -g Volo.Abp.Cli`
 Update ABP CLI
-- `dotnet tool update -g Volo.Abp.Cli`
-run command to create??? or download from website below
+- `dotnet tool update -g Volo.Abp.Cli` (had to update beacuse cuz was running old and could not generate proxy)
+run command to create??? or download from website below 
 
 Download https://abp.io/get-started
   (Dna.CodingChallengeangular, EF Core, seperate Identity Server)
@@ -109,7 +109,25 @@ public DbSet<Show> Shows { get; set; }
 
 
 
-2. List Page
+# 2. List Page
+
+## Localization
+
+## Install NPM Packages
+
+## Create a Shows Page
+
+### ShowMoulde
+- yarn ng generate module show --module app --routing --route shows
+### ShowModule
+
+### Routing
+
+### Service Proxy Generation
+
+### ShowComponent
+
+
 - yarn ng generate module show --module app --routing --route shows
 3. CRUD
 4. Integration Tests
