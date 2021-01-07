@@ -1,5 +1,6 @@
 
 
+using Dna.CodingChallenge.Permissions;
 using System;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
@@ -19,7 +20,11 @@ namespace Dna.CodingChallenge.Shows
     public ShowAppService(IRepository<Show, int> repository)
         : base(repository)
     {
-
+      GetPolicyName = CodingChallengePermissions.Shows.Default;
+      GetListPolicyName = CodingChallengePermissions.Shows.Default;
+      CreatePolicyName = CodingChallengePermissions.Shows.Create;
+      UpdatePolicyName = CodingChallengePermissions.Shows.Edit;
+      DeletePolicyName = CodingChallengePermissions.Shows.Delete;
     }
   }
 }

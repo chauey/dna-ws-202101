@@ -21,12 +21,14 @@ function configureRoutes(routesService: RoutesService) {
         iconClass: 'fas fa-film',
         order: 2,
         layout: eLayoutType.application,
+        requiredPolicy: 'CodingChallenge.Shows',
       },
       {
         path: '/shows',
         name: '::Menu:Shows',
         parentName: '::Menu:Netflix',
         layout: eLayoutType.application,
+        requiredPolicy: 'CodingChallenge.Shows',
       },
     ]);
   };

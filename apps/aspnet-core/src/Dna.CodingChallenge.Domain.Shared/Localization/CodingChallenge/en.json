@@ -41,6 +41,11 @@
     "Enum:RatingType:11": "TV-Y",
     "Enum:RatingType:12": "TV-V7",
     "Enum:RatingType:13": "TV-V7-FV",
-    "Enum:RatingType:14": "UR"
+    "Enum:RatingType:14": "UR",
+    "Permission:CodingChallenge": "Coding Challenge",
+    "Permission:Shows": "Show Management",
+    "Permission:Shows.Create": "Creating new shows",
+    "Permission:Shows.Edit": "Editing the shows",
+    "Permission:Shows.Delete": "Deleting the show"
   }
 }

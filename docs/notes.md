@@ -1,12 +1,12 @@
 # TASKS
 Data
-- [ ] pick
+- [ ] pick other data
 - [x] netflix
 
 Objectives
 - [x] responsive desktop/mobile
     - [x] table 
-      - search/filter
+      - [ ] search/filter
       - [x] sort
       - [x] paging
     - [ ] graphs
