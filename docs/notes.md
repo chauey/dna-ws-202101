@@ -1,3 +1,25 @@
+# TASKS
+Data
+- [ ] pick
+- [x] netflix
+
+Objectives
+- [x] responsive desktop/mobile
+    - [x] table 
+      - search/filter
+      - [x] sort
+      - [x] paging
+    - [ ] graphs
+- [x] unit testing
+- [x] linting
+- [x] personal github
+
+Extra
+- [x] database
+- [ ] CI (CircleCI, etc.)
+- [x] auth
+- [ ] google cloud
+
 # Commands
 check nx version
 - `nx --version`
